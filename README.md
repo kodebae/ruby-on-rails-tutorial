@@ -1,8 +1,9 @@
-# 🚀 Ruby on Rails Tutorial by Michael Hartl 6th Edition Study Companion
+# 🚀 Ruby on Rails Tutorial | Study Companion
+## by Michael Hartl (6th Edition)
 
-Welcome to my walkthrough of the **Ruby on Rails Tutorial (6th Edition)** — powered by a custom Docker wrapper built by [Shannarra’s Rails 7 template](https://github.com/Shannarra/rails7template).
+Welcome to my walkthrough of the **Ruby on Rails Tutorial (6th Edition)** — quick started with a custom Docker wrapper built by [Shannarra’s Rails 7 template](https://github.com/Shannarra/rails7template).
 
-This repo combines my learnings from the book but utilizes with a pre-built Docker-based Rails 7 environment. So there is added complexity there. This also allows us to utilize hotwire and stimulus, which I will be adding a separate section for later on. I'm actively studying and modifying this as I build the toy app, track progress, and add real-world notes from my dev environment. Please be sure to refer to the repo linked above for more info on the Docker wrapper.
+This repo combines my learnings from the book but utilizes with a pre-built Docker-based Rails 7 environment. So there is added complexity there. This also allowed me to utilize hotwire and stimulus, which I will be adding an additional section for later on. I'm actively studying and modifying this as I build the toy app, track progress, and add real-world notes from my dev environment. Please be sure to refer to the repo linked above for more info on the Docker wrapper.
 
 ---
 
@@ -23,17 +24,17 @@ This Rails 7 app was bootstrapped using [Shannarra’s rails7template](https://g
 
 ---
 
-## 🧪 My Book Progress + Notes
+## 📖 My Book Progress + Notes
 
 ### ✅ Chapter Checklist
 
 | Chapter | Topic                 | Status | Notes                                            |
 | ------: | --------------------- | ------ | ------------------------------------------------ |
 |       1 | Introduction & Setup  | ✅      | Used Docker wrapper instead of manual Ruby setup |
-|       2 | Toy App Basics        | 🚧     | Building views, controllers inside container     |
+|       2 | Toy App Basics        | 🧸     | Building views, controllers inside container     |
 |       3 | Mostly Static Pages   | 🔲     | Templating and routes under Docker               |
-|       4 | Rails-Flavored Ruby   | 🔲     | Plan to mirror examples in IRB via container     |
-|       5 | Filling in the Layout | 🔲     | Use importmaps with Stimulus for interactivity   |
+|       4 | Rails-Flavored Ruby   | 🛤️     | Plan to mirror examples in IRB via container     |
+|       5 | Filling in the Layout | 🫥     | Use importmaps with Stimulus for interactivity   |
 
 > *I'll keep expanding this section as I progress.*
 
@@ -123,7 +124,7 @@ Then set `SECRET_KEY_BASE` in your environment variables.
 
 ---
 
-## 📖 Key References
+## 🔑 Key References
 
 ### Docker + Rails
 
@@ -142,7 +143,7 @@ Then set `SECRET_KEY_BASE` in your environment variables.
 
 I'll keep this section updated with debugging tricks, gotchas, and reflections as I go.
 
-* **Lesson Learned (Chapter 1):** Using Docker saves tons of setup time, but can be a pain when resolving git conflicts inside mounted volumes.
+* **Lesson Learned (Chapter 1):** Using the Docker wrapper saves tons of setup time, but can be a pain to set up. utilizing hotwire/stimulus changed the answer for "hola, mundo!" Hint: you will need to modify a different type of controller, not the one mentioned in the book.
 * **Docker Tip:** If you're editing code inside the container, always run `chmod -R 777 tmp` if weird caching issues show up.
 * **Rails Tip:** The `importmap` + Turbo combo is nice, but gets tricky when you're following a book written before Rails 7.
 
