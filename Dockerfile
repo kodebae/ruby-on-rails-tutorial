@@ -25,4 +25,7 @@ RUN gem install rails -v 7.0.8
 COPY . .
 
 # Default CMD (not used by generator)
-CMD ["rails", "server", "-b", "0.0.0.0"]
+# Commenting out for now
+# CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["bash", "-c", "bin/rails db:prepare && bundle exec puma -C config/puma.rb"]
+
