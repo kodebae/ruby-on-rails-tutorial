@@ -1,8 +1,8 @@
-# 🚀 Ruby on Rails Tutorial + Docker Wrapper Walkthrough
+# 🚀 Ruby on Rails Tutorial by Michael Hartl 6th Edition Study Companion
 
-Welcome to my walkthrough of the **Ruby on Rails Tutorial (6th Edition)** — powered by a custom Docker wrapper based on [Shannarra’s Rails 7 template](https://github.com/Shannarra/rails7template).
+Welcome to my walkthrough of the **Ruby on Rails Tutorial (6th Edition)** — powered by a custom Docker wrapper built by [Shannarra’s Rails 7 template](https://github.com/Shannarra/rails7template).
 
-This repo combines my learnings from the book with a pre-built Docker-based Rails 7 environment. I'm actively studying and modifying this as I build the toy app, track progress, and add real-world notes from my dev environment.
+This repo combines my learnings from the book but utilizes with a pre-built Docker-based Rails 7 environment. So there is added complexity there. This also allows us to utilize hotwire and stimulus, which I will be adding a separate section for later on. I'm actively studying and modifying this as I build the toy app, track progress, and add real-world notes from my dev environment. Please be sure to refer to the repo linked above for more info on the Docker wrapper.
 
 ---
 
@@ -142,7 +142,7 @@ Then set `SECRET_KEY_BASE` in your environment variables.
 
 I'll keep this section updated with debugging tricks, gotchas, and reflections as I go.
 
-* **Lesson Learned (Week 1):** Using Docker saves tons of setup time, but can be a pain when resolving git conflicts inside mounted volumes.
+* **Lesson Learned (Chapter 1):** Using Docker saves tons of setup time, but can be a pain when resolving git conflicts inside mounted volumes.
 * **Docker Tip:** If you're editing code inside the container, always run `chmod -R 777 tmp` if weird caching issues show up.
 * **Rails Tip:** The `importmap` + Turbo combo is nice, but gets tricky when you're following a book written before Rails 7.
 
