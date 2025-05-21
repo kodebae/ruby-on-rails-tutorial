@@ -24,6 +24,9 @@ RUN gem install rails -v 7.0.8
 # Copy everything in
 COPY . .
 
+# Install all Ruby gems from Gemfile.lock
+RUN bundle install
+
 # Default CMD (not used by generator)
 # Commenting out for now
 # CMD ["rails", "server", "-b", "0.0.0.0"]
