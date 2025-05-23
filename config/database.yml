@@ -5,11 +5,12 @@ default: &default
 
 development:
   <<: *default
-  database: app_development
+  url: <%= ENV["DATABASE_URL"] %>
 
 test:
   <<: *default
   database: app_test
 
+# This makes Rails respect the .env database config inside Docker.
 production:
   url: <%= ENV["DATABASE_URL"] %>
