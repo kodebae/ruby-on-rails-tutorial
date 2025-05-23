@@ -62,6 +62,11 @@ Rails Console:
 ```bash
 docker compose exec web bin/rails c
 ```
+Must preface all rails console commands with the following in order to run rails inside of the Docker container:
+
+```bash
+docker compose run --rm web bin/
+```
 
 Tests:
 
