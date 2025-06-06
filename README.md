@@ -39,9 +39,9 @@ This Rails 7 app was bootstrapped using [Shannarra’s rails7template](https://g
 
 | Chapter | Topic                 | Status | Notes                                            |
 | ------: | --------------------- | ------ | ------------------------------------------------ |
-|       1 | Introduction & Setup  | ✅     | Used Docker wrapper instead of manual Ruby setup |
+|       1 | Introduction & Setup  | ✅     | What is RoR w/ setup, caveat: I used a Docker wrapper instead of manual Ruby setup |
 |       2 | Toy App Basics        | 🧸     | Building views, controllers inside container     |
-|       3 | Mostly Static Pages   | 🔲     | Templating and routes under Docker               |
+|       3 | Mostly Static Pages   | 🔲     | Using rails generate and understanding setup instructions TDD: Red-Green-Refactor            |
 |       4 | Rails-Flavored Ruby   | 🛤️     | Plan to mirror examples in IRB via container     |
 |       5 | Filling in the Layout | 🫥     | Use importmaps with Stimulus for interactivity   |
 
@@ -162,7 +162,8 @@ I'll keep this section updated with debugging tricks, gotchas, and reflections a
 * **Docker Tip:** If you're editing code inside the container, always run `chmod -R 777 tmp` if weird caching issues show up.You will need to run rails console commands inside of the Docker container with my setup. I had to modify the Docker wrapper to make it work, please check the configurations in the relative files. I googled how to set up the Render deploy for my app and my PostgreSQL DB.
 * **Rails Tip:** The `importmap` + Turbo combo is nice, but gets tricky when you're following a book written before Rails 7. You will need to rely heavily on outsiude resources.
 * **Lesson Learned (Chapter 2):** Using the rails console to rapidly generate code is a helpful way to get up and running quickly. Active Record and AR associations are the foundation of our application and our DB. [Understanding Active Record Associations](https://youtu.be/5mhuNSkV_vQ?feature=shared)
-
+* **Lesson Learned (Chapter 3):** We run bundle install to install and include the specified gems in the Gemfile. Rails actions come bundled together inside of controllers.
+* **Rails Tip:** 'rails g' is short for 'rails generate'.'rails generate' and 'rails destroy' cancel each other out. Undo migrations with 'rails db:rollback' run migrations with 'rails db:migrate' go all the way back to the begining with 'rails db:migrate VERSION=0'
 ---
 
 ## 🙏 Credits
