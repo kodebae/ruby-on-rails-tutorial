@@ -14,3 +14,4 @@ test:
 # This makes Rails respect the .env database config inside Docker.
 production:
   url: <%= ENV["DATABASE_URL"] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>

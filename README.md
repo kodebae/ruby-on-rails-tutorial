@@ -64,7 +64,7 @@ docker compose up
 ```
 
 Then visit:
-[http://localhost:3000](http://localhost:3000)
+[localhost](http://localhost:3000)
 
 Rails Console:
 
