@@ -82,7 +82,11 @@ Tests:
 ```bash
 docker compose run --rm web bin/rspec
 ```
+Show tables:
 
+```bash
+docker compose run --rm web bin/rails db:migrate:status
+```
 ---
 
 ## 🔐 Optional: Devise Auth Setup
