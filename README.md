@@ -63,8 +63,14 @@ Or manually:
 docker compose up
 ```
 
+Restart the Rails Server
+
+```bash
+docker-compose restart web
+```
+
 Then visit:
-[localhost](http://localhost:3000)
+[localhost](http://localhost:3000) 
 
 Rails Console:
 
@@ -166,7 +172,19 @@ I'll keep this section updated with debugging tricks, gotchas, and reflections a
 * **Docker Tip:** If you're editing code inside the container, always run `chmod -R 777 tmp` if weird caching issues show up.You will need to run rails console commands inside of the Docker container with my setup. I had to modify the Docker wrapper to make it work, please check the configurations in the relative files. I googled how to set up the Render deploy for my app and my PostgreSQL DB.
 * **Rails Tip:** The `importmap` + Turbo combo is nice, but gets tricky when you're following a book written before Rails 7. You will need to rely heavily on outsiude resources.
 * **Lesson Learned (Chapter 2):** Using the rails console to rapidly generate code is a helpful way to get up and running quickly. Active Record and AR associations are the foundation of our application and our DB. [Understanding Active Record Associations](https://youtu.be/5mhuNSkV_vQ?feature=shared)
-* **Lesson Learned (Chapter 3):** We run bundle install to install and include the specified gems in the Gemfile. Rails actions come bundled together inside of controllers.
+* **Lesson Learned (Chapter 3):** We run bundle install to install and include the specified gems in the Gemfile. Rails actions come bundled together inside of controllers. This chapters main focus was taking static pages and turning them into dynamic pages. Then implmenting the bare minimum testing while touching on red green refactoring TDD.
+- Rails routing with root and named routes
+- Controller actions for static pages
+- View templates with ERB
+- Helper methods for DRY code
+- Layout files with yield
+- Integration testing with assert_select
+- Your application now has:
+- Home page: "Home | Ruby on Rails Tutorial Sample App"
+- Help page: "Help | Ruby on Rails Tutorial Sample App"
+- About page: "About | Ruby on Rails Tutorial Sample App"
+- Contact page: "Contact | Ruby on Rails Tutorial Sample App"
+
 * **Rails Tip:** 'rails g' is short for 'rails generate'.'rails generate' and 'rails destroy' cancel each other out. Undo migrations with 'rails db:rollback' run migrations with 'rails db:migrate' go all the way back to the begining with 'rails db:migrate VERSION=0'
 ---
 
