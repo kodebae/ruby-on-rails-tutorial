@@ -1,7 +1,23 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+// Bootstrap is now loaded via CDN in the layout
 
 /* universal */
+
+/* images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* specific image sizing */
+.rails-logo {
+  width: 200px;
+  height: auto;
+}
+
+.kitten-image {
+  width: 200px;
+  height: auto;
+}
 
 html {
   overflow-y: scroll;

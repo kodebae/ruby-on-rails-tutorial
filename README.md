@@ -70,7 +70,7 @@ docker-compose restart web
 ```
 
 Then visit:
-[localhost](http://localhost:3000) 
+[localhost](http://localhost:3100) 
 
 Rails Console:
 
