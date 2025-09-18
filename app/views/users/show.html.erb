@@ -1,6 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @user %>
+<div class="row">
+  <div class="col-md-8">
+    <%= render @user %>
+  </div>
+  <div class="col-md-4">
+    <%= render 'shared/user_info' %>
+  </div>
+</div>
 
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
