@@ -176,9 +176,16 @@ input, textarea, select, .uneditable-input {
   @include box_sizing;
 }
 
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
 input {
   height: auto !important;
 }
+
 
 #error_explanation {
   color: red;
@@ -204,3 +211,4 @@ input {
   margin-top: 45px;
   @include box_sizing;
 }
+
