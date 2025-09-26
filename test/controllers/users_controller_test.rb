@@ -30,16 +30,17 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :unprocessable_entity
   end
 
-  test "should accept valid signup information" do
-    assert_difference 'User.count', 1 do
-      post users_path, params: { user: { name: "Example User",
-                                       email: "user@example.com",
-                                       password: "password",
-                                       password_confirmation: "password" } }
-    end
-    follow_redirect!
-    assert_template 'users/show'
-  end
+         test "should accept valid signup information" do
+           assert_difference 'User.count', 1 do
+             post users_path, params: { user: { name: "Example User",
+                                              email: "user@example.com",
+                                              password: "password",
+                                              password_confirmation: "password" } }
+           end
+           follow_redirect!
+           assert_template 'users/show'
+           assert is_logged_in?
+         end
 
   test "should create user" do
     assert_difference("User.count") do
