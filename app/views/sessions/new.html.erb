@@ -3,17 +3,21 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <form action="<%= login_path %>" method="post">
-      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-      
-      <label for="session_email">Email</label>
-      <input type="email" name="session[email]" id="session_email" class="form-control" />
+    <%= form_with(url: sessions_path, local: true, data: { turbo: false }) do |form| %>
+      <div class="field">
+        <%= form.label :email, "Email" %>
+        <%= form.email_field :email, name: "session[email]", class: "form-control" %>
+      </div>
 
-      <label for="session_password">Password</label>
-      <input type="password" name="session[password]" id="session_password" class="form-control" />
+      <div class="field">
+        <%= form.label :password, "Password" %>
+        <%= form.password_field :password, name: "session[password]", class: "form-control" %>
+      </div>
 
-      <input type="submit" value="Log in" class="btn btn-primary" />
-    </form>
+      <div class="actions">
+        <%= form.submit "Log in", class: "btn btn-primary" %>
+      </div>
+    <% end %>
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
   </div>
