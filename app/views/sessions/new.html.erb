@@ -14,6 +14,13 @@
         <%= form.password_field :password, name: "session[password]", class: "form-control" %>
       </div>
 
+      <div class="field">
+        <%= form.label :remember_me, class: "checkbox inline" do %>
+          <%= form.check_box :remember_me, name: "session[remember_me]", checked: true %>
+          <span>Remember me on this computer</span>
+        <% end %>
+      </div>
+
       <div class="actions">
         <%= form.submit "Log in", class: "btn btn-primary" %>
       </div>

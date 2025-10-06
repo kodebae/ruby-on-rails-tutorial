@@ -14,7 +14,7 @@ development:
 
 test:
   <<: *default
-  database: app_test
+  database: <%= ENV.fetch("POSTGRES_DB", "app_development") %>
 
 # This makes Rails respect the .env database config inside Docker.
 production:
